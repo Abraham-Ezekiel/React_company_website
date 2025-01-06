@@ -1,0 +1,30 @@
+.service_card{
+    background: var(--color-ui-secondary);
+    padding: 20px;
+    border-radius: var(--radius-3);
+    border: solid 2px transparent;
+    transition: var(--transition);
+    box-shadow: var(--shadow-1);
+}
+.service_card:hover{
+    border-color: var(--color-primary);
+    background: var(--color-ui-variant);
+
+}
+.service_card .icon_container{
+    font-size: 45px;
+    width: 4rem;
+    height: 4rem;
+}
+.service_card:hover .icon_container{
+    transform: scale(1.2);
+    color: var(--color-primary);
+}
+.service_card .name{
+    font-size: 16px;
+    margin: 30px 0 10px 0;
+}
+.service_card .description{
+    font-size: 14px;
+}
+

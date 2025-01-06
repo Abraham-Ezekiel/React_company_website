@@ -1,0 +1,91 @@
+#header{
+    background: var(--glow-1);
+    position: static !important;
+}
+#header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, transparent 10%, var(--color-primary) 100%);
+}
+#header .container *{
+    text-align: left;
+}
+#header .container{
+    padding-top: 30px;
+}
+/*
+
+#header .container .row .column:first-child{
+    border: dashed;
+    flex: 1;
+}
+
+#header .image_container{
+    border: dashed;
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: var(--radius-2);
+    transition: var(--transition);
+}*/
+#header .container > .row {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between; /* Ensures space between left and right content */
+    align-items: center; /* Vertically aligns the items */
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#header .container .row .column {
+    flex: 1; /* Makes columns equal width */
+}
+
+#header .container .row .column:first-child {
+    margin-bottom: 120px;
+    text-align: left; /* Ensures text alignment on the left */
+}
+
+#header .container .row .column:last-child {
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image vertically */
+}
+#header .container .buttons_container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#header .image_container{
+    width: 100%; /* Ensures the image fits within its container */
+    max-width: 100%; /* Prevents the image from overflowing */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: var(--radius-2);
+    transition: var(--transition);
+}
+
+#header .image_container:hover img{
+    transform: scale(1.2);
+  
+}
+@media (max-width:900px){
+    #header .container *{
+        text-align: center;
+    }
+    #header .container >.row{
+        flex-direction: column;
+    }
+    #header .container .buttons_container{
+        justify-content: center;
+    }
+}
+
